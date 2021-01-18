@@ -1,0 +1,36 @@
+{
+	"text": "what is Lebron James' three point percentage?",
+	"intents": [{
+		"id": "910995809430567",
+		"name": "playerSingleStat",
+		"confidence": 0.9971
+	}],
+	"entities": {
+		"stat:stat": [{
+			"id": "400216844698473",
+			"name": "stat",
+			"role": "stat",
+			"start": 22,
+			"end": 44,
+			"body": "three point percentage",
+			"confidence": 0.949,
+			"entities": [],
+			"value": "three point percentage",
+			"type": "value"
+		}],
+		"wit$contact:contact": [{
+			"id": "2314920001987908",
+			"name": "wit$contact",
+			"role": "contact",
+			"start": 8,
+			"end": 20,
+			"body": "Lebron James",
+			"confidence": 0.9347,
+			"entities": [],
+			"suggested": true,
+			"value": "Lebron James",
+			"type": "value"
+		}]
+	},
+	"traits": {}
+}

@@ -1,0 +1,37 @@
+image: node:10.21.0
+
+stages:
+  - build
+  - lint
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
+  only:
+    - master
+    - merge_requests
+
+eslint:
+  stage: lint
+  script:
+    - npm install -g eslint #install eslint
+    - eslint --ignore-path .lintignore . # Run ESLint
+  only:
+    - master
+    - merge_requests
+
+testing:
+  stage: test
+  script: npm test
+  only:
+    - master
+    - merge_requests

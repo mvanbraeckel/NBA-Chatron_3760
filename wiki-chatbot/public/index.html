@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      crossorigin="anonymous"
+      src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"
+    ></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("/images/background.jpg");
+      }
+
+      body {
+        margin: 0;
+      }
+
+      #card {
+        position: absolute;
+        left: 50%;
+        margin-top: 8%;
+        margin-left: -25%;
+        height: 70%;
+        width: 50%;
+        background-color: rgba(50,50,50,0.3);
+        transition: 0.3s;
+        border-radius: 3%; /* 5px rounded corners */
+      }
+
+      #webchat {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        height: 96%;
+        width: 96%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card">
+      <div id="webchat" role="main"></div>
+    </div>
+    
+    <script>
+        const styleOptions = {
+
+            // web chat background styles
+            accent: 'White',
+            backgroundColor: 'transparent',
+            cardEmphasisBackgroundColor: '#F0F0F0',
+            paddingRegular: 10,
+            paddingWide: 10 * 2,
+            subtle: 'White',
+
+            // bot bubble styles
+            bubbleBackground: 'rgba(202, 121, 52, 0.7)',
+            bubbleBorderColor: 'transparent',
+            bubbleBorderRadius: 10,
+            bubbleTextColor: 'White',
+            bubbleNubOffset: 'bottom',
+            bubbleNubSize: 0,
+
+            // user bubble styles
+            bubbleFromUserBackground: 'rgba(67, 181, 226, 0.7)',
+            bubbleFromUserBorderColor: 'transparent',
+            bubbleFromUserBorderRadius: 10,
+            bubbleFromUserNubOffset: 'bottom',
+            bubbleFromUserNubSize: 0,
+            bubbleFromUserTextColor: 'White',
+
+            // send box
+            hideSendBox: false,
+            sendBoxBackground: 'rgba(0, 0, 0, 0)',
+            sendBoxTextColor: 'white',
+
+            timestampColor: undefined, // defaults to subtle
+            timestampFormat: 'relative', // 'absolute'
+        };
+        window.WebChat.renderWebChat(
+        {
+            directLine: window.WebChat.createDirectLine({
+                secret: 'O_KDXz07O4I.vYNG76p-T3ycY3nc3IJcDM37V3homWEeNUSZ_qeg8Wg',
+                //domain: 'http://localhost:3000/directline',
+                //webSocket: false // defaults to true
+            }),
+            styleOptions
+        },
+        document.getElementById('webchat')
+      );
+    </script>
+  </body>
+</html>

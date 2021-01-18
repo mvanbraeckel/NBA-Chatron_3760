@@ -1,0 +1,45 @@
+{
+    "name": "nba-chatron",
+    "version": "1.0.0",
+    "description": "Interact with the user and exchange stats about the NBA",
+    "author": "Generated using Microsoft Bot Builder Yeoman generator v4.10.3",
+    "license": "MIT",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./index.js",
+        "start-offline": "sudo fuser -k 3000/tcp & sudo directline -d 3000 -b \"http://localhost:8080/api/messages\" & node ./index.js",
+        "stop": "node server.stop.js",
+        "watch": "nodemon ./index.js",
+        "lint": "eslint --ignore-path .lintignore .",
+        "lintfix": "eslint --ignore-path .lintignore --fix .",
+        "test": "nyc mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com"
+    },
+    "dependencies": {
+        "botbuilder": "~4.10.3",
+        "botbuilder-testing": "^4.10.4",
+        "dotenv": "^8.2.0",
+        "mssql": "^6.2.3",
+        "mysql": "^2.18.1",
+        "nba": "^4.13.0",
+        "nba-api-client": "^1.1.1",
+        "node-wit": "^6.0.0",
+        "npm": "^7.0.7",
+        "nyc": "^15.1.0",
+        "restify": "~8.5.1",
+        "socket.io": "^2.3.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.0.0",
+        "eslint-config-standard": "^14.1.1",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1",
+        "mocha": "^8.2.1",
+        "nodemon": "~2.0.4"
+    }
+}
