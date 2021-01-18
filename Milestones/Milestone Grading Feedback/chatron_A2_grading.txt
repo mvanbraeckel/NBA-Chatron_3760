@@ -1,0 +1,3 @@
+DevOps: 
+- Should have followed Single-issue branch/merge strategy (-6)
+--> (correction) half the grade will be awarded back (-3)
